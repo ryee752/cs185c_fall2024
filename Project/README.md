@@ -14,35 +14,35 @@ The following steps outline how to construct the model files, configure and run 
 ## Step 1: Create the Model Files
 Several input files need to be created to run the model. Generate the following list of files using the notebooks indicated in paratheses:
 
-Model Grid (notebooks/Creating_the_Model_Grid.ipynb)
-Bathymetry (notebooks/Creating_the_Bathymetry.ipynb)
-Initial Conditions (notebooks/Creating_the_Initial_Conditions.ipynb)
-External Forcing Conditions (notebooks/Creating_the_External_Forcing_Conditions.ipynb)
-Boundary Conditions (notebooks/Creating_the_Boundary_Conditions.ipynb) The model files should be placed into the input directory.
+Model Grid (notebooks/Creating_the_Model_Grid.ipynb)</br>
+Bathymetry (notebooks/Creating_the_Bathymetry.ipynb)</br>
+Initial Conditions (notebooks/Creating_the_Initial_Conditions.ipynb)</br>
+External Forcing Conditions (notebooks/Creating_the_External_Forcing_Conditions.ipynb)</br>
+Boundary Conditions (notebooks/Creating_the_Boundary_Conditions.ipynb) The model files should be placed into the input directory.</br>
 ## Step 2: Add files to the computing cluster
-Once the input files have been created, the model files can be transferred to the computing cluster. Begin by cloning a copy of MITgcm into your scratch directory and make a folder for the configuration, .e.g.
+Once the input files have been created, the model files can be transferred to the computing cluster. Begin by cloning a copy of MITgcm into your scratch directory and make a folder for the configuration, .e.g. </br>
 
-mkdir MITgcm/configurations/ca_upwelling
-Then, use the scp command to send the code, input, and namelist directories to your configuration directory.
+mkdir MITgcm/configurations/ca_upwelling</br>
+Then, use the scp command to send the code, input, and namelist directories to your configuration directory.</br>
 
-Step 3: Compile the model
-Once all of the files are on the computing cluster, the model can be compiled. Make a build directory in the configuration directory and run the following lines:
+## Step 3: Compile the model
+Once all of the files are on the computing cluster, the model can be compiled. Make a build directory in the configuration directory and run the following lines:</br>
 
-../../../tools/genmake2 -of ../../../tools/build_options/darwin_amd64_gfortran -mods ../code -mpi
-make depend
-make
+../../../tools/genmake2 -of ../../../tools/build_options/darwin_amd64_gfortran -mods ../code -mpi</br>
+make depend</br>
+make</br>
 ## Step 4: Run the model with wind
-After the compilation is complete, run the model with the wind. Move to the run directory, link everything from input and code, and the submit the job script:
+After the compilation is complete, run the model with the wind. Move to the run directory, link everything from input and code, and the submit the job script:</br>
 
-sbatch cs185c16.slm
+sbatch cs185c16.slm</br>
 
 ## Step 5: Analyze the Results
-There are two notebooks provided for analysis:
+There are two notebooks provided for analysis:</br>
 
-Analyzing Model Results
+Analyzing Model Results</br>
 
-This notebook is provided to have a quick look at spatial and temporal variations in the temperature, sea surface height, and velocity fields in the model. It also generates the visualization provided in the figures directory.
+This notebook is provided to have a quick look at spatial and temporal variations in the temperature, sea surface height, and velocity fields in the model. It also generates the visualization provided in the figures directory.</br>
 
-Answering the Science Question
+Answering the Science Question</br>
 
-This notebook provides analysis to address the science question posed above.
+This notebook provides analysis to address the science question posed above.</br>
