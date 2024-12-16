@@ -39,10 +39,10 @@ sbatch cs185c16.slm</br>
 ## Step 5: Analyze the Results
 There are two notebooks provided for analysis:</br>
 
-Analyzing Model Results</br>
+Analyzing_Model_Results.ipynb</br>
 
 This notebook is provided to have a quick look at spatial and temporal variations in the temperature, sea surface height, and velocity fields in the model. It also generates the visualization provided in the figures directory.</br>
 
-Answering the Science Question</br>
+Answering_the_Science_Question.ipynb</br>
 
 This notebook provides analysis to address the science question posed above.</br>
